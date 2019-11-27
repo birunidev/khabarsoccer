@@ -1,0 +1,19 @@
+{
+    "name": "Khabar Soccer",
+    "short_name": "Khabarsoccer",
+    "description": "Football Information",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#00A97F",
+    "theme_color": "#00A97F",
+    "icons": [{
+        "src": "./assets/logoSplash512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }, {
+        "src": "./assets/logoSplash192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }],
+    "gcm_sender_id": "1014954977037"
+}
