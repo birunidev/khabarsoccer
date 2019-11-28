@@ -14,17 +14,21 @@ workbox.routing.registerRoute(
 )
 
 
-
 workbox.routing.registerRoute(
-  new RegExp('https://api.football-data.org/v2/competitions/2021/teams'), workbox.strategies.cacheFirst()
-);
-workbox.routing.registerRoute(
-  new RegExp('https://api.football-data.org/v2/teams'), workbox.strategies.cacheFirst()
+  new RegExp('https://api.football-data.org/v2'), workbox.strategies.cacheFirst()
 );
 
-workbox.routing.registerRoute(
-  new RegExp('https://api.football-data.org/v2/competitions/2021/standings'), workbox.strategies.cacheFirst()
-);
+
+// workbox.routing.registerRoute(
+//   new RegExp('https://api.football-data.org/v2/competitions/2021/teams'), workbox.strategies.cacheFirst()
+// );
+// workbox.routing.registerRoute(
+//   new RegExp('https://api.football-data.org/v2/teams'), workbox.strategies.cacheFirst()
+// );
+
+// workbox.routing.registerRoute(
+//   new RegExp('https://api.football-data.org/v2/competitions/2021/standings'), workbox.strategies.cacheFirst()
+// );
 
 workbox.precaching.precacheAndRoute([{
     "url": "assets/favicon-16x16.png",
@@ -241,10 +245,6 @@ workbox.precaching.precacheAndRoute([{
   {
     "url": "js/notification.js",
     "revision": "e60a7b50942f7f6c769153e06e0e894d"
-  },
-  {
-    "url": "js/push.js",
-    "revision": "da7d078e2daa94179b68448803169490"
   },
   {
     "url": "js/register-sw.js",

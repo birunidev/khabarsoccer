@@ -44,18 +44,18 @@ function getEnglandStanding() {
                     response.json().then(function (data) {
                         let standingHTML = "";
 
-                        data.standings[0].table.forEach(function (i) {
+                        data.standings[0].table.forEach(function (standing) {
                             standingHTML += `
                         <tr class="row-first centered">
-                                        <th class="centered">${i.position}</th>
-                                        <th class="centered">${i.team.name}</th>
-                                        <th class="centered">${i.playedGames}</th>
-                                        <th class="centered">${i.won}</th>
-                                        <th class="centered">${i.draw}</th>
-                                        <th class="centered">${i.lost}</th>
-                                        <th class="centered">${i.goalsFor}</th>
-                                        <th class="centered">${i.goalsAgainst}</th>
-                                        <th class="centered">${i.points}</th>
+                                        <th class="centered">${standing.position}</th>
+                                        <th class="centered">${standing.team.name}</th>
+                                        <th class="centered">${standing.playedGames}</th>
+                                        <th class="centered">${standing.won}</th>
+                                        <th class="centered">${standing.draw}</th>
+                                        <th class="centered">${standing.lost}</th>
+                                        <th class="centered">${standing.goalsFor}</th>
+                                        <th class="centered">${standing.goalsAgainst}</th>
+                                        <th class="centered">${standing.points}</th>
                                     </tr>
                         `;
                         });

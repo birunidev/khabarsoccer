@@ -50,8 +50,10 @@ if (btnSaveTeam) {
 
                 const tx = db.transaction("saved_team", "readwrite");
                 const savedTeam = tx.objectStore("saved_team");
-                savedTeam.add(dataTeam);
-                alert("Team Berhasil Disimpan");
+                savedTeam.put(dataTeam);
+                M.toast({
+                    html: 'Team Has Been Saved Succesfully'
+                })
 
 
             });
@@ -113,7 +115,9 @@ function deleteTeam(id) {
     const deleteTeam = tx.objectStore("saved_team");
     deleteTeam.delete(id);
 
-    alert("team deleted");
+    M.toast({
+        html: 'Team Has Been Deleted Succesfully'
+    })
     timedRefresh(20);
 }
 
@@ -140,8 +144,10 @@ function addPlayer(id) {
                 position: data.position,
                 nationality: data.nationality
             };
-            savedPlayer.add(playerDetail);
-            alert("Player has been added");
+            savedPlayer.put(playerDetail);
+            M.toast({
+                html: 'Player Has Been Saved Succesfully'
+            })
 
         });
 }
@@ -182,6 +188,8 @@ function deletePlayer(id) {
     const deleteTeam = tx.objectStore("saved_player");
     deleteTeam.delete(id);
 
-    alert("team deleted");
+    M.toast({
+        html: 'Player Has Been Deleted Succesfully'
+    })
     timedRefresh(20);
 }

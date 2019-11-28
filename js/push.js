@@ -1,8 +1,8 @@
 var webPush = require('web-push');
 
 const vapidKeys = {
-    "publicKey": "BJeMdd59lrfyZOUraPxNAYxkFjtA0x3D3_oAqdBCSwmr_2XLw-kS8dBbFW30ZviF51ybISxUkqrpFO_afXEsMoE",
-    "privateKey": "4pJKvH57r4A0BT6Zzuw_ykHw1eMXGd63I__sjNcsTx4"
+    "publicKey": "BCdCq-ZjKm2KDbQEVcyRJ9RzzcdGJuhvnBI10X4I9A8mBhkycVNolJ3-dpwVnHxaZJRah9bBsI8I5tJQ3iw0LcI",
+    "privateKey": "E3TZW3qhP2gFwx_bvYJqSgZecaw5_h8APxGNMuPcWCA"
 };
 
 

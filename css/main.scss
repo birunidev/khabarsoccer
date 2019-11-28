@@ -52,6 +52,15 @@ body {
     overflow: hidden;
 }
 
+#schedule-page {
+    .coming-soon {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
 footer {
     padding: 20px;
     background: #ECECEC;
