@@ -95,8 +95,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     } else if (page == "teams") {
                         getTeams();
                     } else if (page == "manage") {
-                        viewSavedTeam();
-                        viewPlayer();
+                        setTimeout(function () {
+                            viewSavedTeam();
+                            viewPlayer();
+                        }, 3000);
+
                     }
 
 

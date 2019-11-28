@@ -49,4 +49,4 @@ function urlBase64ToUint8Array(base64String) {
 }
 setTimeout(function () {
     requestPermission()
-}, 6000);
+}, 10000);

@@ -73,18 +73,18 @@ function getEnglandStanding() {
         .then(function (data) {
             let standingHTML = "";
 
-            data.standings[0].table.forEach(function (i) {
+            data.standings[0].table.forEach(function (standing) {
                 standingHTML += `
             <tr class="row-first centered">
-                            <th class="centered">${i.position}</th>
-                            <th class="centered">${i.team.name}</th>
-                            <th class="centered">${i.playedGames}</th>
-                            <th class="centered">${i.won}</th>
-                            <th class="centered">${i.draw}</th>
-                            <th class="centered">${i.lost}</th>
-                            <th class="centered">${i.goalsFor}</th>
-                            <th class="centered">${i.goalsAgainst}</th>
-                            <th class="centered">${i.points}</th>
+                            <th class="centered">${standing.position}</th>
+                            <th class="centered">${standing.team.name}</th>
+                            <th class="centered">${standing.playedGames}</th>
+                            <th class="centered">${standing.won}</th>
+                            <th class="centered">${standing.draw}</th>
+                            <th class="centered">${standing.lost}</th>
+                            <th class="centered">${standing.goalsFor}</th>
+                            <th class="centered">${standing.goalsAgainst}</th>
+                            <th class="centered">${standing.points}</th>
                         </tr>
             `;
             });
@@ -114,12 +114,13 @@ function getTeams() {
                             let urlTeamImage = team.crestUrl;
                             urlTeamImage = urlTeamImage.replace(/^http:\/\//i, 'https://');
                             teamHTML += `<a href=./pages/detailteam.html?id=${team.id}>
-                            <div class="team-info">
-                                <div class="club-image">
-                                    <img src="${urlTeamImage}" alt="">
-                                </div>
-                                <p>${team.name}</p>
-                            </div></a>`;
+                                <div class="team-info">
+                                    <div class="club-image">
+                                        <img src="${urlTeamImage}" alt="">
+                                    </div>
+                                    <p>${team.name}</p>
+                                    </div>
+                                </a>`;
 
                         });
 
@@ -140,12 +141,13 @@ function getTeams() {
                 let urlTeamImage = team.crestUrl;
                 urlTeamImage = urlTeamImage.replace(/^http:\/\//i, 'https://');
                 teamHTML += `<a href=./pages/detailteam.html?id=${team.id}>
-                <div class="team-info">
-                    <div class="club-image">
-                        <img src="${urlTeamImage}" alt="">
-                    </div>
-                    <p>${team.name}</p>
-                </div></a>`;
+                        <div class="team-info">
+                            <div class="club-image">
+                                <img src="${urlTeamImage}" alt="">
+                            </div>
+                            <p>${team.name}</p>
+                        </div>
+                    </a>`;
 
             });
 
@@ -175,13 +177,13 @@ function getTeamById() {
                         let imageTeam = `<img src="${urlTeamImage}" alt="">`;
                         let nameTeam = data.name;
                         let detailTeam = `<li>Name : ${data.name} </li>
-                    <li>Short Name : ${data.shortName} </li>
-                    <li>Address : ${data.address}</li>
-                    <li>Phone : ${data.phone}</li>
-                    <li>Email : ${data.email}</li>
-                    <li>Website : ${data.website}</li>
-                    <li>Founded : ${data.founded}</li>
-                    <li>Club colors : ${data.clubColors} </li>`;
+                        <li>Short Name : ${data.shortName} </li>
+                        <li>Address : ${data.address}</li>
+                        <li>Phone : ${data.phone}</li>
+                        <li>Email : ${data.email}</li>
+                        <li>Website : ${data.website}</li>
+                        <li>Founded : ${data.founded}</li>
+                        <li>Club colors : ${data.clubColors} </li>`;
 
 
 

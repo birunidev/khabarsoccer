@@ -96,8 +96,8 @@ function viewSavedTeam() {
 
         }
 
-
         const redTeam = document.getElementById("manageSavedTeam");
+
         if (redTeam) {
             redTeam.innerHTML = savedTeamHTML;
         }
