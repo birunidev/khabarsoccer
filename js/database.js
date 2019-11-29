@@ -54,20 +54,9 @@ if (btnSaveTeam) {
                 M.toast({
                     html: 'Team Has Been Saved Succesfully'
                 })
-
-
             });
     });
 }
-
-
-// const btnViewNote = document.getElementById("btnViewNote");
-// if (btnViewNote) {
-//     btnViewNote.addEventListener("click", );
-// }
-
-
-
 
 function viewSavedTeam() {
 
@@ -104,7 +93,6 @@ function viewSavedTeam() {
 
     }
 
-
 }
 
 
@@ -125,9 +113,7 @@ function timedRefresh(timeoutPeriod) {
     setTimeout("location.reload(true);", timeoutPeriod);
 }
 
-
 const btnAddPlayer = document.getElementById("btnSavePlayer");
-
 
 function addPlayer(id) {
     fetchApi(base_url + "v2/players/" + id)

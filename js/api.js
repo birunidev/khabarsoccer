@@ -31,9 +31,6 @@ function error(error) {
     console.log('Error : ' + error);
 }
 
-
-
-
 function getEnglandStanding() {
 
     if ('caches' in window) {
@@ -97,10 +94,6 @@ function getEnglandStanding() {
         .catch(error);
 }
 
-
-
-
-
 function getTeams() {
 
     if ('caches' in window) {
@@ -155,13 +148,6 @@ function getTeams() {
             $('#team-page').html(teamHTML);
         })
 }
-
-// fetchApi(base_url + 'v2/teams/57')
-//     .then(status)
-//     .then(json)
-//     .then(function (data) {
-//         console.log(data);
-//     })
 
 function getTeamById() {
     var urlParams = new URLSearchParams(window.location.search);
@@ -253,7 +239,5 @@ function getTeamById() {
 
             }
         )
-    console.log('fetch dari team id');
-
 
 }

@@ -102,8 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     }
 
-
-
                 } else if (this.status == 404) {
                     content.innerHTML = "<p>Halaman tidak ditemukan.</p>";
                 } else {
