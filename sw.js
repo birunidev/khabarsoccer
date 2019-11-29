@@ -13,22 +13,9 @@ workbox.routing.registerRoute(
   workbox.strategies.cacheFirst()
 )
 
-
 workbox.routing.registerRoute(
   new RegExp('https://api.football-data.org/v2'), workbox.strategies.cacheFirst()
 );
-
-
-// workbox.routing.registerRoute(
-//   new RegExp('https://api.football-data.org/v2/competitions/2021/teams'), workbox.strategies.cacheFirst()
-// );
-// workbox.routing.registerRoute(
-//   new RegExp('https://api.football-data.org/v2/teams'), workbox.strategies.cacheFirst()
-// );
-
-// workbox.routing.registerRoute(
-//   new RegExp('https://api.football-data.org/v2/competitions/2021/standings'), workbox.strategies.cacheFirst()
-// );
 
 workbox.precaching.precacheAndRoute([{
     "url": "assets/favicon-16x16.png",
